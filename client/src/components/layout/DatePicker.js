@@ -17,6 +17,7 @@ const DatePicker = ({ selectedDate, todoDate, setTodoDate, setDate }) => {
           margin="normal"
           id="date-picker-inline"
           label="Date"
+          disablePast
           disabled={todoDate === '' ? true : false}
           value={todoDate === '' ? selectedDate : todoDate}
           onChange={(val) => {
