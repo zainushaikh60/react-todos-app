@@ -51,6 +51,9 @@ const useStyles = makeStyles(() => ({
 
 const Todos = ({
   todosListId,
+  todoDate,
+  setTodoDate,
+  dateState,
   todos: { todos, loading, currentTodo },
   addTodo,
   updateTodo,
@@ -68,10 +71,8 @@ const Todos = ({
 
   const clearInput = useRef();
   const titleState = '';
-  const dateState = '';
   const initialDate = '';
   const [title, setTitle] = useState(titleState);
-  const [todoDate, setTodoDate] = useState(dateState);
   const [date, setDate] = useState(initialDate);
   const [tid, setId] = useState();
   const newTodo = { title, date };

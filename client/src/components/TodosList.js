@@ -31,6 +31,9 @@ const useStyles = makeStyles(() => ({
 const TodosList = ({
   setTodosListId,
   todosId,
+  todoDate,
+  setTodoDate,
+  dateState,
   todosList: { todosLists, current, loading },
   getTodosLists,
   addTodosList,
@@ -88,6 +91,10 @@ const TodosList = ({
       clearCurrent();
       setListName(listNameState);
       clear();
+    }
+
+    if (todoDate !== '') {
+      setTodoDate(dateState);
     }
 
     setTodosListId(id);

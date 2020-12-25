@@ -17,6 +17,8 @@ const useStyles = makeStyles(() => ({
 const Home = () => {
   const classes = useStyles();
   const [todosListId, setTodosListId] = useState(null);
+  const dateState = '';
+  const [todoDate, setTodoDate] = useState(dateState);
 
   return (
     <div className={classes.root}>
@@ -30,11 +32,22 @@ const Home = () => {
             alignItems="center"
             justify="center"
           >
-            <TodosList setTodosListId={setTodosListId} todosId={todosListId} />
+            <TodosList
+              setTodosListId={setTodosListId}
+              todosId={todosListId}
+              todoDate={todoDate}
+              setTodoDate={setTodoDate}
+              dateState={dateState}
+            />
           </Grid>
 
           <Grid item xs={6} container direction="column" alignItems="center">
-            <Todos todosListId={todosListId} />
+            <Todos
+              todosListId={todosListId}
+              todoDate={todoDate}
+              setTodoDate={setTodoDate}
+              dateState={dateState}
+            />
           </Grid>
         </Grid>
       </Grid>
