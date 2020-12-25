@@ -11,7 +11,7 @@ const port = config.get('PORT') || 4000;
 // Connect DB
 connectDB();
 
-app.use(express.json());
+app.use(express.json({ extended: false }));
 
 // routes
 app.use('/todos', todosRouter);
